@@ -1,0 +1,9 @@
+<div class="row col-md-12">
+  <ul class="list-group">
+    <li ng-repeat="item in list.foundItems" class="list-group-item">
+      {{item.name}}
+      <button class="btn pull-right" ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+    </li>
+  </ul>
+  <div class="error" ng-if="list.nothingFound()">Nothing found</div>
+</div>
