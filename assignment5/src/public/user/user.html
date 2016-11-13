@@ -1,0 +1,12 @@
+<h2 class="text-center"> Registered informations</h2>
+
+<div class="container" ng-if="UserCtrl.user === undefined">
+  Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+</div>
+<div class="container" ng-if="UserCtrl.user !== undefined">
+  Name : {{UserCtrl.user.lastname}} {{UserCtrl.user.firstname}} </br>
+  Phone : {{UserCtrl.user.phone}} </br>
+  Email : {{UserCtrl.user.email}} </br>
+  My favorite menu : </br>
+  <menu-item menu-item="UserCtrl.user.menu"></menu-item>
+</div>
